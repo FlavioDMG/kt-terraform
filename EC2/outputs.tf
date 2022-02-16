@@ -2,6 +2,10 @@ output "AMI_com_NGINX_id" {
   value = aws_instance.ec2.id
 }
 
+output "ip_address" {
+  value = aws_instance.ec2.public_ip
+}
+
 output "VPC_id" {
   value = aws_vpc.this.id
 }
