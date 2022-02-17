@@ -1,36 +1,40 @@
-# Treinamento: AWS com Terraform Automatizando sua infraestrutura
+# Treinamento: AWS com Terraform.
 
 - O Terraform é uma das ferramentas de infraestrutura muito popular e um dos produtos da HashiCorp.
-- 
+
 - Base de consulta:
-  https://registry.terraform.io/providers/hashicorp/aws/latest/docs (provider-aws)
-  https://www.terraform.io/language (Language Documentation)
+  1. (provider-aws) https://registry.terraform.io/providers/hashicorp/aws/latest/docs
+  2. (Language Documentation) https://www.terraform.io/language
 
 ### Lição Aprendida:
 
 - Criação de Modulos, por exemplo:
-    main.tf, variables.tf, outputs.tf, etc.
-  
+````
+main.tf
+variables.tf
+outputs.tf, etc.
+````
 - Criação de Parâmetros, por exemplo:
-    resource "aws_instance" "Teste" {
-    ami = var.inst_ami
-    instance_type = var.inst_type
-    key_name = var.inst_key
-    tags = var.tags
-    }
-
+```` resource "aws_instance" "Teste" {
+     ami = var.inst_ami
+     instance_type = var.inst_type
+     key_name = var.inst_key
+     tags = var.tags
+     }
+````
+- Como declarar nas instancia, por exemplo:
+````
+ instance_type = "t2.micro" {}
+````
 - Como declarar nas variáveis, por exemplo:
-    variable "inst_ami" {
-    type = "string"
-    }
-
+````
+variable "inst_ami" {}
+````
 - Sei que nosso arquivo "MAIN.TF" e uma raiz do projeto aonde carregam seus moulos e repassar as variáveis.
+- Utilize referências e dependências entre os recursos
+- Instalação de um serviço web "NGINX".
 
-- Aprendir como instalar um NGINX (software de codigo aberto para serviço da web, e muito mais.).
-
-- Utilizei o site "registry.terraform" e "terraform.io" para obter informações da criação do projeto.
-
-### Comando Utilizado:
+### Comando Utilizado no Terraform:
 
 - terraform init : baixa os plugins necessários para executar o código.
 - terraform plan : mostra o plano de ação que o Terraform irá realizar na infra.
@@ -40,10 +44,6 @@
 ### Pré requisitos
 
 - Noções básicas de programação;
-- Instalar Aplicativo Terraform;
-- Instalar Aplicativo AWS CLI para Configurar suas credenciais;
-- Criação de Usuário na AWS.
-
-### Para quem é o curso
-
-- Quem quer aprender Terraform e automatizar o processo de criação e manutenção da infraestrutura de suas aplicações.
+- Aplicativo Terraform;
+- Aplicativo AWS CLI para Configurar suas credenciais;
+- Conta na AWS.
