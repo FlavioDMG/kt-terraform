@@ -36,9 +36,3 @@ variable "instance_tags" {
     Project = "Treinamento Terraform Flavio"
   }
 }
-
-# variable "instance_key" {
-#   type        = string
-#   description = ""
-#   default     = "admin"
-# }
