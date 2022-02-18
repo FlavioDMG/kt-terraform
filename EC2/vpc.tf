@@ -6,7 +6,7 @@ resource "aws_vpc" "this" {
 
 resource "aws_internet_gateway" "this" {
   vpc_id = aws_vpc.this.id
-  tags   = merge(local.cammon_tags, { Name = "Terraform IGW" })
+  tags   = merge(local.cammon_tags, { Name = "Internet Gateway" })
 }
 
 resource "aws_subnet" "this" {
